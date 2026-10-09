@@ -52,7 +52,7 @@ data/docs/*.pdf|docx|txt
 ## Решения по моделям
 - **Эмбеддинги:** локальная `Giga-Embeddings-instruct-480M-0826` (Сбер, instruct, 1024-dim, офлайн).
   Замена модели ⇒ пересборка индекса (`python ingest.py`). Для максимального качества
-  возможна `ai-forever/sbert_large_nlu_ru` (~1.2 ГБ, надо качать вручную — HF LFS CDN заблокирован).
+  возможна `ai-forever/sbert_large_nlu_ru` (~1.2 ГБ, надо качать вручную — HF LFS CDN недоступен напрямую).
 - **LLM:** GigaChat (`LLM_PROVIDER=gigachat`, `LLM_MODEL` — актуальный id из `GET /v1/models`,
   по умолчанию `GigaChat-2`). Сырой `ChatOpenAI` не годится — GigaChat требует OAuth, который
   делает SDK (`langchain-gigachat`).
